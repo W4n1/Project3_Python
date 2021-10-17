@@ -6,11 +6,14 @@ name_of_units = ("hours", "minutes", "seconds")
 
 
 def days_to_units_calc(number_of_days):
-    return (f"{number_of_days} days are {number_of_days * durartion_type[1]} {name_of_units[0]}")
-    return (f"{number_of_days} days are {number_of_days * durartion_type[1]} {name_of_units[1]}")
-    return (f"{number_of_days} days are {number_of_days * durartion_type[1]} {name_of_units[2]}")
-
-
+    if number_of_days > 0:
+        return (f"{number_of_days} days are {number_of_days * durartion_type[1]} {name_of_units[0]}")
+        return (f"{number_of_days} days are {number_of_days * durartion_type[1]} {name_of_units[1]}")
+        return (f"{number_of_days} days are {number_of_days * durartion_type[1]} {name_of_units[2]}")
+    else:
+        return "you have entered a negative value, please enter a positive to proceed."
+    
+    
 '''print(custom_message)
 days_to_units_calc("You have converted days to your preferred unit, please see results below", 35)'''
 
@@ -22,9 +25,12 @@ print(calc_value)
 
 
 def months_to_units_calc(number_of_days):
-    return (f"{number_of_days} months are {number_of_days * durartion_type[0]} {name_of_units[0]}")
-    return (f"{number_of_days} months are {number_of_days * durartion_type[0]} {name_of_units[1]}")
-    return (f"{number_of_days} months are {number_of_days * durartion_type[0]} {name_of_units[2]}")
+    if number_of_days > 0:
+        return (f"{number_of_days} months are {number_of_days * durartion_type[0]} {name_of_units[0]}")
+        return (f"{number_of_days} months are {number_of_days * durartion_type[0]} {name_of_units[1]}")
+        return (f"{number_of_days} months are {number_of_days * durartion_type[0]} {name_of_units[2]}")
+    else:
+        return "you have entered a negative value, please enter a positive to proceed."
 
 
 
