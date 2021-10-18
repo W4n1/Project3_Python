@@ -28,9 +28,12 @@ def validate_and_execute_days():
     except ValueError:
         print("Your input is not a number of days. To proceed please use a number! Do not ruin my program friend!")
 
-
-user_day_input = input("Please enter a number of days you'd like me to convert to units!\n")
-validate_and_execute_days()
+#looping the logic
+#assign an empty string to variable user_day_input before the while
+user_day_input = ""
+while user_day_input != "exit":
+      user_day_input = input("Please enter a number of days you'd like me to convert to units!\n")
+      validate_and_execute_days()
 
 
 def months_to_units_calc(number_of_days):
@@ -47,7 +50,7 @@ months_to_units_calc("You have converted months to your preferred unit", 35)'''
 def validate_and_execute_months():
     try:
         user_input_integer = int(user_month_input)
-        if user_month_input > 0:
+        if user_input_integer > 0:
             calc_value = months_to_units_calc(user_input_integer)
             print(calc_value)
         elif user_month_input == 0:
@@ -57,6 +60,18 @@ def validate_and_execute_months():
     except ValueError:
         print("Your input is not a number of months. To proceed please use a number! Do not ruin my program friend!")
 
+# creating the loop 
+user_month_input = ""
+while user_month_input != "exit":
+    user_month_input = input("Please enter a number of months you'd like me to convert to units!\n")
+    validate_and_execute_months()
 
-user_month_input = input("Please enter a number of months you'd like me to convert to units!\n")
-validate_and_execute_months()
+
+
+'''
+> currently it is only converting hours. 
+> there is no real transaction from days to months
+> for the day loop, exit currently means change to months
+> for the month loop, exit finishes the process. 
+> I need to apply the intro in the test section to the this file
+'''
